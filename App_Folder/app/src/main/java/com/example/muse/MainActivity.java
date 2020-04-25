@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static String deezer(String artist) throws IOException {
         OkHttpClient client = new OkHttpClient();
-        Request request1 = new Request.Builder()
+        Request request = new Request.Builder()
                 .url("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + artist)
                 .get()
                 .addHeader("x-rapidapi-host", "deezerdevs-deezer.p.rapidapi.com")
@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         try(Response response = client.newCall(request).execute()){
-        try(Response response = client.newCall(request1).execute()){
             return response.body().string();
         } catch (IOException x){
             return "No response";
