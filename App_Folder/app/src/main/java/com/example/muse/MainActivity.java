@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
     public static String deezer() throws IOException {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
@@ -44,6 +43,4 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("Error no response (psvm)");
         }
     }
-
-     
 }
