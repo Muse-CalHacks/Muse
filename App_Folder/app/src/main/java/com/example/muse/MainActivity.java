@@ -1,6 +1,10 @@
 package com.example.muse;
 
 import androidx.appcompat.app.AppCompatActivity;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 import java.util.*;
 //import
 
@@ -14,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /*
+
     OkHttpClient client = new OkHttpClient();
 
     Request request = new Request.Builder()
@@ -25,6 +29,6 @@ public class MainActivity extends AppCompatActivity {
             .build();
 
     Response response = client.newCall(request).execute();
-    */
+
      
 }
