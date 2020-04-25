@@ -19,7 +19,7 @@
 
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/user"
         android:layout_width="342dp"
         android:layout_height="25dp"
         android:layout_marginStart="24dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/pass"
         android:layout_width="344dp"
         android:layout_height="27dp"
         android:layout_marginStart="24dp"
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/user" />
 
     <Button
         android:id="@+id/signupbtn"
@@ -61,14 +61,14 @@
         android:layout_gravity="start"
         android:layout_marginTop="16dp"
         android:enabled="false"
+        android:onClick="signupButton"
         android:text="Don't have an account? Sign up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.432"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/pass"
+        app:layout_constraintVertical_bias="0.432" />
 
     <Button
         android:id="@+id/loginbtn"
@@ -79,12 +79,13 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
         android:enabled="false"
+        android:onClick="buttonClicked"
         android:text="Sign in"
         app:layout_constraintBottom_toTopOf="@+id/signupbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/pass"
         app:layout_constraintVertical_bias="0.551" />
 
 
