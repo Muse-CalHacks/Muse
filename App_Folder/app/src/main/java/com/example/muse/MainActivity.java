@@ -1,9 +1,9 @@
 package com.example.muse;
 
 import androidx.appcompat.app.AppCompatActivity;
-//import okhttp3.OkHttpClient;
-//import okhttp3.Request;
-//import okhttp3.Response;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 import java.io.IOException;
 import java.util.*;
@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public static String deezer() throws IOException {
+    public static String deezer(String artist) throws IOException {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-                .url("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem")
+                .url("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + artist)
                 .get()
                 .addHeader("x-rapidapi-host", "deezerdevs-deezer.p.rapidapi.com")
                 .addHeader("x-rapidapi-key", "f501cb6e2fmsh6da6dc9b2afed6ep16156ejsn8a3f63043162")
@@ -36,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void main(String[] args) {
+        System.out.println("Hola");
+
         try {
-            String ret = deezer();
+            String ret = deezer("edsheeran");
             System.out.println(ret);
         } catch(IOException x){
             System.out.println("Error no response (psvm)");
