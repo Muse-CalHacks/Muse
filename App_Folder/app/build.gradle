@@ -5,6 +5,7 @@ android {
     defaultConfig {
         applicationId "com.example.muse"
         minSdkVersion 21
+        //was at 21 for min, using 21 again because expected android api level needs ot be 21+ says on error console
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -36,6 +37,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "com.google.firebase:firebase-analytics:16.0.5"
     implementation 'com.google.firebase:firebase-auth:16.0.5'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
 }
 
 apply plugin: 'com.google.gms.google-services'
